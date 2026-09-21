@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ciro Riccio | Assistant Professor of Physics, Stony Brook University</title>
+<meta name="description" content="The website of Ciro Riccio, Assistant Professor in the Department of Physics and Astronomy at Stony Brook University. Research on neutrino oscillations, CP violation, and neutrino-nucleus interactions with the T2K and DUNE experiments.">
+<meta property="og:title" content="Ciro Riccio | Assistant Professor of Physics, Stony Brook University">
+<meta property="og:description" content="Neutrino oscillations, CP violation, and neutrino-nucleus interactions with the T2K and DUNE experiments.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14243d;
+  --navy-2:#1d3355;
+  --ink:#22262c;
+  --body:#454b54;
+  --muted:#767d87;
+  --line:#e0e3e8;
+  --line-2:#eef0f3;
+  --tint:#f6f8fa;
+  --accent:#1f4272;      /* navy blue */
+  --accent-2:#2b5a99;
+  --accent-soft:#eef3fa;
+  --max:1140px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#fff;color:var(--body);
+  font-family:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.serif{font-family:'Source Serif 4',Georgia,serif}
+::selection{background:#dfe6f0}
+.container{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+/* ---------- utility bar ---------- */
+.utility{background:var(--navy);color:#cdd7e6;font-size:13.5px}
+.utility .container{display:flex;flex-wrap:wrap;gap:18px;align-items:center;padding-top:9px;padding-bottom:9px}
+.utility a{color:#cdd7e6}
+.utility a:hover{color:#fff;text-decoration:underline}
+.utility .right{margin-left:auto;display:flex;gap:18px}
+
+/* ---------- header ---------- */
+header.site{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50}
+header.site .container{display:flex;align-items:center;gap:26px;padding-top:16px;padding-bottom:16px}
+.wordmark{line-height:1.2}
+.wordmark .n{font-family:'Source Serif 4',serif;font-size:21px;font-weight:600;color:var(--ink);letter-spacing:.005em}
+.wordmark .t{font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+header.site nav{margin-left:auto;display:flex;gap:26px;font-size:15px}
+header.site nav a{color:var(--body);padding-bottom:3px;border-bottom:2px solid transparent;transition:.18s}
+header.site nav a:hover{color:var(--accent);border-color:var(--accent)}
+.menu-btn{display:none;margin-left:auto;border:1px solid var(--line);background:#fff;color:var(--ink);
+  padding:7px 13px;border-radius:4px;font-size:14px;font-family:inherit;cursor:pointer}
+
+/* ---------- hero ---------- */
+.hero{background:var(--tint);border-bottom:1px solid var(--line)}
+.hero .container{display:grid;grid-template-columns:400px 1fr;gap:48px;padding-top:56px;padding-bottom:56px;align-items:start}
+.photo{width:100%;border:1px solid var(--line);background:#fff;padding:7px}
+.photo img{width:100%;display:block}
+.photo-cap{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.45}
+h1{font-size:clamp(34px,4.4vw,46px);line-height:1.14;color:var(--ink);font-weight:600;letter-spacing:-.012em}
+.title-line{font-size:18px;color:var(--accent);font-weight:600;margin-top:10px}
+.affil{font-size:16.5px;color:var(--muted);margin-top:2px}
+.intro{margin-top:22px;font-size:18.5px;line-height:1.62;max-width:400px;color:var(--body)}
+.intro strong{color:var(--ink);font-weight:600}
+.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}
+.btn{
+  font-family:inherit;font-size:15px;font-weight:600;padding:10px 20px;border-radius:3px;
+  border:1px solid var(--accent);color:var(--accent);background:#fff;transition:.18s;display:inline-block
+}
+.btn:hover{background:var(--accent);color:#fff}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-2);border-color:var(--accent-2)}
+.btn.plain{border-color:var(--line);color:var(--body)}
+.btn.plain:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+
+/* ---------- sections ---------- */
+section{padding:60px 0;border-bottom:1px solid var(--line-2)}
+section:last-of-type{border-bottom:0}
+.sec-title{
+  font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--accent);padding-bottom:10px;border-bottom:2px solid var(--accent);
+  display:inline-block;margin-bottom:26px
+}
+h2{font-size:clamp(26px,3.2vw,33px);color:var(--ink);font-weight:600;letter-spacing:-.012em;line-height:1.22;margin-bottom:18px}
+h3{font-size:19.5px;color:var(--ink);font-weight:600;margin-bottom:6px}
+p{margin-bottom:15px;max-width:74ch}
+p strong{color:var(--ink);font-weight:600}
+.lead{font-size:19px;color:var(--ink);max-width:66ch}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0 46px}
+
+/* facts table */
+.facts{border-top:1px solid var(--line);margin-top:8px}
+.facts div{display:grid;grid-template-columns:190px 1fr;gap:20px;padding:13px 0;border-bottom:1px solid var(--line-2)}
+.facts dt{font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.facts dd{color:var(--ink)}
+
+/* ---------- research ---------- */
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 44px}
+.area{padding:22px 0;border-top:1px solid var(--line-2)}
+.area .label{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.area p{font-size:16px;margin-bottom:0}
+
+/* ---------- publications ---------- */
+.pub-list{border-top:1px solid var(--line)}
+.pub{display:grid;grid-template-columns:62px 1fr;gap:22px;padding:16px 0;border-bottom:1px solid var(--line-2);align-items:baseline}
+.pub .yr{font-size:15px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pub .ti{font-family:'Source Serif 4',serif;font-size:18px;line-height:1.42;color:var(--ink)}
+.pub .ti a:hover{color:var(--accent);text-decoration:underline}
+.pub .mt{font-size:14.5px;color:var(--muted);margin-top:5px}
+.pub .mt em{font-style:normal;font-weight:600;color:var(--navy-2)}
+
+/* ---------- software ---------- */
+.feature{border:1px solid var(--line);border-top:4px solid var(--accent);background:var(--accent-soft);padding:30px 32px;margin-bottom:26px}
+.feature .kicker{font-size:12.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.feature h3{font-size:26px;margin-bottom:4px}
+.feature .expand{font-size:16px;color:var(--muted);margin-bottom:16px;font-style:italic}
+.feature p{max-width:none}
+.spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;margin:22px 0 4px;padding-top:18px;border-top:1px solid #d4dded}
+.spec dt{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.spec dd{font-size:15.5px;color:var(--ink)}
+.repo-list{border-top:1px solid var(--line)}
+.repo{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--line-2)}
+.repo b{color:var(--ink);font-size:17px;font-weight:600}
+.repo b a:hover{color:var(--accent);text-decoration:underline}
+.repo span{font-size:15.5px;color:var(--muted)}
+.repo .role{font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+
+/* ---------- people ---------- */
+.people-group{margin-top:30px}
+.people-group:first-of-type{margin-top:10px}
+.people-group > h3{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);
+  padding-bottom:9px;border-bottom:1px solid var(--accent);margin-bottom:0}
+.person{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line-2)}
+.person .nm{font-size:18px;font-weight:600;color:var(--ink)}
+.person .nm a{border-bottom:1px solid transparent;transition:.18s}
+.person .nm a:hover{color:var(--accent);border-color:var(--accent)}
+.person .rl{font-size:15.5px;color:var(--muted)}
+
+/* ---------- links ---------- */
+.link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.link-grid a{border:1px solid var(--line);border-left:3px solid var(--accent);padding:16px 18px;transition:.18s;background:#fff}
+.link-grid a:hover{background:var(--tint);border-left-color:var(--navy)}
+.link-grid b{display:block;color:var(--ink);font-weight:600;font-size:16.5px}
+.link-grid small{color:var(--muted);font-size:14px}
+
+/* ---------- contact ---------- */
+.contact{background:var(--navy);color:#dbe3ee;border-bottom:0}
+.contact .sec-title{color:#a8c6ec;border-color:#a8c6ec}
+.contact h2{color:#fff}
+.contact p{color:#c2cddd}
+.contact a{color:#fff}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:28px;margin-top:30px;padding-top:26px;border-top:1px solid rgba(255,255,255,.16)}
+.cgrid dt{font-size:12.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#93a6bf;margin-bottom:6px}
+.cgrid dd{font-size:16.5px;color:#fff}
+.cgrid dd a:hover{text-decoration:underline}
+
+footer{background:#0e1a2c;color:#8fa0b8;font-size:14px}
+footer .container{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding-top:22px;padding-bottom:22px}
+
+@media(max-width:900px){
+  .hero .container{grid-template-columns:1fr;gap:30px;padding-top:38px;padding-bottom:38px}
+  .photo{max-width:280px}
+  .split,.areas{grid-template-columns:1fr;gap:0}
+  .facts div{grid-template-columns:1fr;gap:3px}
+  .pub{grid-template-columns:1fr;gap:5px}
+  .person{grid-template-columns:1fr;gap:3px}
+  header.site nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+    background:#fff;border-bottom:1px solid var(--line);padding:8px 28px 14px}
+  header.site nav.open{display:flex}
+  header.site nav a{padding:9px 0;border-bottom:1px solid var(--line-2)}
+  .menu-btn{display:block}
+  .utility .right{display:none}
+  section{padding:44px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="utility">
+  <div class="container">
+    <a href="https://www.stonybrook.edu/physics/index.html" target="_blank" rel="noopener">Department of Physics &amp; Astronomy</a>
+    <span class="right">
+      <a href="https://www.stonybrook.edu/commcms/physics/nngroup/" target="_blank" rel="noopener">NN Research Group</a>
+      <a href="mailto:ciro.riccio@stonybrook.edu">ciro.riccio@stonybrook.edu</a>
+    </span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container">
+    <a class="wordmark" href="#top">
+      <div class="n">Ciro Riccio</div>
+      <div class="t">Stony Brook University</div>
+    </a>
+    <button class="menu-btn" onclick="document.querySelector('header.site nav').classList.toggle('open')">Menu</button>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#software">Software</a>
+      <a href="#publications">Publications</a>
+      <a href="#group">Group</a>
+      <a href="#students">Opportunities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="container">
+    <div>
+      <div class="photo">
+        <img src="https://www.stonybrook.edu/__academic-units/physics/_images/peopleprofiles/riccioc.png" alt="Portrait of Ciro Riccio" loading="lazy">
+      </div>
+    </div>
+    <div>
+      <h1>Ciro Riccio</h1>
+      <p class="title-line">Assistant Professor of Physics and Astronomy</p>
+      <p class="affil">Stony Brook University · Neutrino and Nucleon decay Group</p>
+      <p class="intro">I work on the long-baseline neutrino experiments <strong>T2K</strong> and <strong>DUNE</strong>, where my research focuses on neutrino oscillations: the measurement of CP violation in the lepton sector, the determination of the neutrino mass ordering, and searches for physics beyond the Standard Model. This work rests on a detailed understanding of neutrino-nucleus interactions, robust statistical methods, and the development of new detector technologies, all of which are central to reaching the precision these measurements demand. I also lead the development of <strong>GUNDAM</strong>, an open analysis framework now used across several neutrino experiments.</p>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container">
+    <p class="sec-title">About</p>
+    <h2>Biography</h2>
+    <div class="split">
+      <div>
+        <p>I am an Assistant Professor in the Department of Physics and Astronomy at Stony Brook University, where I am a member of the Neutrino and Nucleon decay (NN) group.</p>
+        <p>I received my Ph.D. in January 2018 with a thesis entitled <em>“Measurement of the antineutrino flux and cross section at the near detector of the T2K experiment,”</em> carried out under a joint doctoral agreement between the <strong>Università degli Studi di Napoli Federico II</strong> in Italy and <strong>Université Paris-Saclay, Commissariat à l'énergie atomique et aux énergies alternatives (CEA)</strong> in France.</p>
+        <p>From 2018 to 2020 I was a Postdoctoral Associate at the Università degli Studi di Napoli Federico II. In May 2020 I joined the NN group at Stony Brook University as a Postdoctoral Associate, and I subsequently joined the faculty.</p>
+      </div>
+      <div>
+        <dl class="facts">
+          <div><dt>Position</dt><dd>Assistant Professor</dd></div>
+          <div><dt>Department</dt><dd>Physics and Astronomy</dd></div>
+          <div><dt>Research group</dt><dd>Neutrino and Nucleon decay (NN)</dd></div>
+          <div><dt>Ph.D.</dt><dd>2018 — Napoli Federico II &amp; Paris-Saclay / CEA</dd></div>
+          <div><dt>Collaborations</dt><dd>T2K, DUNE</dd></div>
+          <div><dt>Office</dt><dd>Physics D-108</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="container">
+    <p class="sec-title">Research</p>
+    <h2>Research statement</h2>
+    <div class="split">
+      <div>
+        <p class="lead">My research interests focus on understanding the matter–antimatter asymmetry in the Universe: neutrino oscillations, neutrino–nucleus cross sections, statistical data analysis, and new detection technologies.</p>
+        <p>Neutrino oscillations are supported today by a very large set of measurements obtained with a variety of experimental configurations and techniques. These results can be interpreted in the framework of three active massive neutrinos, whose mass and flavor eigenstates are related by the <strong>Pontecorvo–Maki–Nakagawa–Sakata (PMNS) matrix</strong>, parameterized by three mixing angles and a CP-violating phase, together with the squared-mass differences of the mass eigenstates.</p>
+      </div>
+      <div>
+        <p>Three pieces of the puzzle nonetheless remain: the precise value of one mixing angle, the <strong>neutrino mass ordering</strong>, and the measurement of the <strong>CP-violating phase</strong>, which can shed light on the matter–antimatter asymmetry in the Universe.</p>
+        <p>Long-baseline experiments will make a noteworthy contribution to these measurements over the next two decades. Future experiments will achieve unprecedented precision, driven both by the substantial volume of data they will collect and by innovative detector technologies. This will allow us to test — and eventually go beyond — the PMNS paradigm.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:42px">Principal areas of work</h2>
+    <div class="areas">
+      <div class="area">
+        <p class="label">T2K</p>
+        <h3>Long-baseline oscillation analysis</h3>
+        <p>Accelerator neutrinos traveling 295 km from J-PARC to Super-Kamiokande: appearance and disappearance channels, combined neutrino and antineutrino analyses, and the joint SK+T2K oscillation analysis.</p>
+      </div>
+      <div class="area">
+        <p class="label">DUNE</p>
+        <h3>The next-generation program</h3>
+        <p>Liquid argon time projection chambers at unprecedented scale: atmospheric neutrino, long-baseline oscillation sensitivities, production of hardward components.</p>
+      </div>
+      <div class="area">
+        <p class="label">Cross sections</p>
+        <h3>Neutrino-nucleus interactions</h3>
+        <p>Interaction modelling are the leading systematic in oscillation analyses. I study neutrino and antineutrino interactions, neutron event-by-event kinetic energy reconstruction and the neutrino-nucleus cross-section modeling can be studied by near-detector data.</p>
+      </div>
+      <div class="area">
+        <p class="label">Instrumentation</p>
+        <h3>New detection technologies</h3>
+        <p>Multi-PMT and SuperFGD prototype activities, SuperFGD data analysis, R&amp;D of LArTPCs photon detection systems.</p>
+      </div>
+      <div class="area">
+        <p class="label">Data analysis</p>
+        <h3>Data analysis methods</h3>
+        <p>Fitting frameworks in high-dimensional analyses; much of it developed within the <a href="#software" style="color:var(--accent);text-decoration:underline">GUNDAM</a> framework.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="software">
+  <div class="container">
+    <p class="sec-title">Software</p>
+    <div class="feature" style="margin-top:4px">
+      <p class="kicker">Analysis framework</p>
+      <h3>GUNDAM</h3>
+      <p class="expand">Generalized and Unified Neutrino Data Analysis Methods</p>
+      <p>GUNDAM is a suite of applications for likelihood-based statistical analysis in neutrino physics. It brings fitting, uncertainty propagation, and validation tools together on in a common framework. Jobs are described entirely through structured YAML and JSON configuration, allowing an analysis to be adapted without rewriting the framework for each study.</p>
+      <dl class="spec">
+        <div><dt>Configuration</dt><dd>YAML / JSON</dd></div>
+        <div><dt>Language</dt><dd>C++17</dd></div>
+        <div><dt>Ecosystem</dt><dd>ROOT 6</dd></div>
+        <div><dt>In use by</dt><dd>T2K · ICARUS · DUNE</dd></div>
+        <div><dt>License</dt><dd>LGPL v2.1</dd></div>
+      </dl>
+      <div class="actions" style="margin-top:22px">
+        <a class="btn primary" href="https://gundam-organization.github.io/gundam-website/" target="_blank" rel="noopener">GUNDAM website</a>
+        <a class="btn" href="https://gundam-organization.github.io/gundam-website/documentation.html" target="_blank" rel="noopener">Documentation</a>
+        <a class="btn plain" href="https://github.com/gundam-organization/gundam" target="_blank" rel="noopener">Source repository</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="publications">
+  <div class="container">
+    <p class="sec-title">Publications</p>
+    <h2>Selected publications</h2>
+    <p>A selection of recent and representative work. The complete record is available through the links at the end of this section.</p>
+
+    <div class="pub-list" style="margin-top:26px">
+
+      <div class="pub">
+        <div class="yr">2026</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/2603.14921" target="_blank" rel="noopener">The super fine-grained detector for the T2K neutrino oscillation experiment</a></div>
+          <div class="mt"><em>T2K Collaboration</em> · Nucl. Instrum. Meth. A 1092, 171882 · arXiv:2603.14921</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="yr">2026</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/2601.05697" target="_blank" rel="noopener">Reconstruction of atmospheric neutrinos in DUNE's horizontal-drift far-detector module</a></div>
+          <div class="mt"><em>DUNE Collaboration</em> · Eur. Phys. J. C 86, 904 · arXiv:2601.05697</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="yr">2025</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/2510.19888" target="_blank" rel="noopener">Joint neutrino oscillation analysis from the T2K and NOvA experiments</a></div>
+          <div class="mt"><em>T2K and NOvA Collaborations</em> · Nature 646, 818–824 · arXiv:2510.19888</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="yr">2025</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/2506.05889" target="_blank" rel="noopener">Results from the T2K experiment on neutrino mixing including a new far detector μ-like sample</a></div>
+          <div class="mt"><em>T2K Collaboration</em> · Phys. Rev. Lett. 135, 261801 · arXiv:2506.05889</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="yr">2024</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/2410.04603" target="_blank" rel="noopener">Self-compensating light calorimetry with liquid argon time projection chamber for GeV neutrino physics</a></div>
+          <div class="mt">Phys. Rev. D 111, 032007 · arXiv:2410.04603</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="yr">2024</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/2405.12488" target="_blank" rel="noopener">First joint oscillation analysis of Super-Kamiokande atmospheric and T2K accelerator neutrino data</a></div>
+          <div class="mt"><em>T2K and Super-Kamiokande Collaborations</em> · Phys. Rev. Lett. 134, 011801 · arXiv:2405.12488</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="yr">2023</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/2303.03222" target="_blank" rel="noopener">Measurements of neutrino oscillation parameters from the T2K experiment using 3.6 × 10<sup>21</sup> protons on target</a></div>
+          <div class="mt"><em>T2K Collaboration</em> · Eur. Phys. J. C 83, 782 · arXiv:2303.03222</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="yr">2022</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/2207.02685" target="_blank" rel="noopener">Total neutron cross-section measurement on CH with a novel 3D-projection scintillator detector</a></div>
+          <div class="mt">Phys. Lett. B 840, 137843 · arXiv:2207.02685</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="yr">2021</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/2102.03346" target="_blank" rel="noopener">First T2K measurement of transverse kinematic imbalance in the muon-neutrino charged-current single-π<sup>+</sup> production channel containing at least one proton</a></div>
+          <div class="mt"><em>T2K Collaboration</em> · Phys. Rev. D 103, 112009 · arXiv:2102.03346</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="yr">2021</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/2101.03779" target="_blank" rel="noopener">Improved constraints on neutrino mixing from the T2K experiment with 3.13 × 10<sup>21</sup> protons on target</a></div>
+          <div class="mt"><em>T2K Collaboration</em> · Phys. Rev. D 103, 112008 · arXiv:2101.03779</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="yr">2020</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/2002.09323" target="_blank" rel="noopener">First combined measurement of the muon neutrino and antineutrino charged-current cross section without pions in the final state at T2K</a></div>
+          <div class="mt"><em>T2K Collaboration</em> · Phys. Rev. D 101, 112001 · arXiv:2002.09323</div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="yr">2019</div>
+        <div>
+          <div class="ti"><a href="https://arxiv.org/abs/1910.03887" target="_blank" rel="noopener">Constraint on the matter–antimatter symmetry-violating phase in neutrino oscillations</a></div>
+          <div class="mt"><em>T2K Collaboration</em> · Nature 580, 339 · arXiv:1910.03887</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="actions" style="margin-top:22px">
+      <a class="btn" href="https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%20Ciro.Riccio.1" target="_blank" rel="noopener">Complete record on INSPIRE-HEP</a>
+      <a class="btn plain" href="https://scholar.google.it/citations?hl=en&user=4rdB9R8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </div>
+</section>
+
+<section id="group">
+  <div class="container">
+    <p class="sec-title">Group</p>
+    <h2>Students</h2>
+
+    <div class="people-group">
+      <h3>Graduate students</h3>
+      <div class="person">
+        <div class="nm">Haowei Zheng</div>
+        <div class="rl">Ph.D. student</div>
+      </div>
+      <div class="person">
+        <div class="nm">Kuunal Mahtani</div>
+        <div class="rl">Ph.D. student, co-supervised with Chang Kee Jung</div>
+      </div>
+      <div class="person">
+        <div class="nm">Flynn Guo</div>
+        <div class="rl">Master of Science in Instrumentation (MSI) student</div>
+      </div>
+    </div>
+
+    <div class="people-group">
+      <h3>Undergraduate students</h3>
+      <div class="person">
+        <div class="nm"><a href="https://www.stonybrook.edu/physics/nngroup/NNGroupProfiles/runshif.html" target="_blank" rel="noopener">Stone Chou</a></div>
+        <div class="rl">Undergraduate student</div>
+      </div>
+      <div class="person">
+        <div class="nm">Yiding Sun</div>
+        <div class="rl">Undergraduate student</div>
+      </div>
+      <div class="person">
+        <div class="nm">Xubowen Tao</div>
+        <div class="rl">Undergraduate student</div>
+      </div>
+    </div>
+
+    <div class="people-group">
+      <h3>Former students</h3>
+      <div class="person">
+        <div class="nm">Ian Segal-Gould</div>
+        <div class="rl">M.S. now a graduate student at Ohio State University</div>
+      </div>
+      <div class="person">
+        <div class="nm">Harrison Wolf</div>
+        <div class="rl">M.S. now a graduate student at the South Dakota School of Mines &amp; Technology</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="students">
+  <div class="container">
+    <p class="sec-title">Opportunities</p>
+    <h2>Working with the group</h2>
+    <div class="split">
+      <div>
+        <p>I welcome inquiries from prospective graduate students, undergraduates seeking research experience, and postdoctoral candidates interested in experimental neutrino physics.</p>
+        <p>Projects in the group span the full arc of a activities in a multipurpose experiement like T2K and DUNE: oscillation and cross-section analysis, development of statistical fitting frameworks, detector commissioning, characterization, and hardware R&amp;D for future detectors.</p>
+      </div>
+      <div>
+        <p>Undergraduate students at Stony Brook interested in a research project are encouraged to write with a short note about their background and interests. Prospective graduate students should apply through the <a href="https://www.stonybrook.edu/physics/graduate/apply.html" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline">departmental admissions process</a> and are welcome to contact me directly beforehand.</p>
+        <p>Further information about the group's activities is available on the <a href="https://www.stonybrook.edu/commcms/physics/nngroup/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline">Neutrino and Nucleon decay group website</a>.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:42px">Profiles and resources</h2>
+    <div class="link-grid">
+      <a href="https://www.stonybrook.edu/physics/people/_profiles/riccioc.html" target="_blank" rel="noopener"><b>Departmental profile</b><small>Stony Brook University</small></a>
+      <a href="https://www.stonybrook.edu/commcms/physics/nngroup/" target="_blank" rel="noopener"><b>Neutrino &amp; Nucleon decay Group</b><small>Research group website</small></a>
+      <a href="https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%20Ciro.Riccio.1" target="_blank" rel="noopener"><b>INSPIRE-HEP</b><small>Complete publication record</small></a>
+      <a href="https://scholar.google.it/citations?hl=en&user=4rdB9R8AAAAJ" target="_blank" rel="noopener"><b>Google Scholar</b><small>Citation metrics</small></a>
+      <a href="https://gundam-organization.github.io/gundam-website/" target="_blank" rel="noopener"><b>GUNDAM</b><small>Neutrino data analysis framework</small></a>
+      <a href="https://github.com/riccioc" target="_blank" rel="noopener"><b>GitHub</b><small>Software and analysis code</small></a>
+      <a href="https://www.linkedin.com/in/ciro-riccio-81954199/" target="_blank" rel="noopener"><b>LinkedIn</b><small>Professional profile</small></a>
+      <a href="mailto:ciro.riccio@stonybrook.edu"><b>Email</b><small>ciro.riccio@stonybrook.edu</small></a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <p class="sec-title">Contact</p>
+    <h2>Get in touch</h2>
+    <p>For research inquiries, collaboration, invited talks, or student opportunities, email is the most reliable means of contact.</p>
+    <dl class="cgrid">
+      <div><dt>Email</dt><dd><a href="mailto:ciro.riccio@stonybrook.edu">ciro.riccio@stonybrook.edu</a></dd></div>
+      <div><dt>Telephone</dt><dd><a href="tel:6316328104">(631) 632-8104</a></dd></div>
+      <div><dt>Office</dt><dd>Physics Building, D 108</dd></div>
+      <div><dt>Mailing address</dt><dd>Department of Physics &amp; Astronomy<br>Stony Brook University<br>Stony Brook, NY 11794-3800</dd></div>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>© <span id="yr"></span> Ciro Riccio</span>
+    <span>Department of Physics and Astronomy · Stony Brook University</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
